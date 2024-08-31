@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheel of Fortune</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="form-container">
+      <h1>Wheel of Fortune</h1>
+      <form id="user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="wheel-container" style="display: none">
+      <div id="wheel"><!-- Empty div for wheel --></div>
+      <div id="pointer"><!-- Arrow pointer --></div>
+      <button id="spin-btn" disabled>Spin</button>
+      <div id="result-message"></div>
+    </div>
+
+    <script src="scripts/wheelOfFortune.js"></script>
+  </body>
+</html>

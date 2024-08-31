@@ -1,0 +1,111 @@
+/* Basic styles for the form and wheel */
+#form-container,
+#wheel-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#wheel-container {
+  position: relative;
+  width: 300px;
+  height: 340px;
+  margin: 0 auto;
+}
+
+#wheel {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-image: conic-gradient(
+    black 0 30deg,
+    white 30deg 60deg,
+    black 60deg 90deg,
+    white 90deg 120deg,
+    black 120deg 150deg,
+    white 150deg 180deg,
+    black 180deg 210deg,
+    white 210deg 240deg,
+    black 240deg 270deg,
+    white 270deg 300deg,
+    black 300deg 330deg,
+    white 330deg 360deg
+  );
+  transition: transform 4s ease-out;
+}
+
+#pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#result-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#spin-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* Form styling */
+#user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#user-form label {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+#user-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#user-form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#user-form button:hover {
+  background-color: #218838;
+}
+
+#user-form button:active {
+  background-color: #1e7e34;
+}
+
+#user-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
